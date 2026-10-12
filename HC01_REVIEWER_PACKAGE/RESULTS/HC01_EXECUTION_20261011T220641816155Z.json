@@ -1,0 +1,27 @@
+{
+  "test_id": "HC01_EXECUTION_REFERENCE_v0.1",
+  "evidence_class": "AUTOMOTIVE_DERIVED_REFERENCE_PROBE",
+  "healthcare_enforcement_established": false,
+  "real_patient_data": false,
+  "real_vehicle_actuation": false,
+  "simulation_only": true,
+  "external_authority_source_connected": false,
+  "revocation_simulated_at": null,
+  "freshness_replay_case": "HC-01C supplies the historical authority object despite a simulated later revocation.",
+  "original_source_sha256_before": {
+    "governance": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "release": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "execution": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5"
+  },
+  "original_source_sha256_after": {
+    "governance": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "release": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "execution": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5"
+  },
+  "original_source_unchanged": true,
+  "setup_error": {
+    "type": "RuntimeError",
+    "message": "RELEASE_CREATION_NOT_ESTABLISHED: {'release_created': True, 'reason_code': 'RELEASE_CONTENT_BOUND_STATE', 'release': {'schema_version': '0.1', 'release_id': 'REL-95D9A8B9AC8E8323F0C9EAE673093F491004BFD96C48B44E404F144E377E0F3B', 'determination_id': 'DET-9EDF5C1C58322928963AD376EC28FD0E1E929A5D2479F494031A4E0CA76D2351', 'vehicle_id': 'VEHICLE-001', 'state_id': 'STATE-001', 'authority_id': 'AUTH-001', 'context_id': 'CTX-001', 'delta_id': 'DELTA-001', 'evidence_id': 'EVIDENCE-001', 'consequence_id': 'CONSEQUENCE-001', 'policy_version': 'EAG-POLICY-0.1', 'issued_at': '2026-09-24T12:00:01Z', 'expires_at': '2026-09-24T12:02:00Z', 'single_use': True, 'binding_hash': '95D9A8B9AC8E8323F0C9EAE673093F491004BFD96C48B44E404F144E377E0F3B'}}"
+  },
+  "results": {}
+}

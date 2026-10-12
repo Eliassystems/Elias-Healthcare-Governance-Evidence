@@ -1,0 +1,160 @@
+{
+  "test_id": "HC01_DOCKER_ISOLATION_ORCHESTRATOR_v0.8",
+  "evidence_class": "SYNTHETIC_REFERENCE_RUNTIME_IN_RESTRICTED_CONTAINER",
+  "probe_script_sha256": "CD19175D74202714EE85A8B50F53DEA068FB5C8CD5703428C274019D21CE5E5B",
+  "prior_v07_report_sha256": "9568FD2977630CF71A17E6DC18200CA936EDB0005133E3D80F2906709A2572E1",
+  "prior_v07_script_sha256": "3DE79FD9417A0EB662F066C25B59034FF6C8AB6EDB35150F6888C4F9E5B6E3C6",
+  "source_hashes_before": {
+    "SRC/evidence/schema_contract.py": "FBB63926009EF82BDFE7E4BA8E9B8AE05A84F89AFCF50EA0FB8747ED9ED54D2A",
+    "SRC/execution_stub/__init__.py": "12E6E779C091BDE54D921C67450260213BDC16B62C3993B67B093B0B1A4D38E4",
+    "SRC/execution_stub/execution_boundary.py": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5",
+    "SRC/governance/__init__.py": "25205D7EFEFA4F693F894F8239376FA0EC9305216278889ACF3AAEEA2F1D40D4",
+    "SRC/governance/governance_engine.py": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "SRC/latency/__init__.py": "3AC028F3038B8063CBDA354329BCB6DD9A4EED940D935014BE7F6F9114F62ADB",
+    "SRC/latency/latency_measurement.py": "671398811E31BDAE08DACF8227DB4E9ADEF993DD3FECF9CAD071FFC7B453DA89",
+    "SRC/latency/latency_measurement_v0_2.py": "A69C72EB1F4C1C38913F23E34E188F19F076847BFEDD713213ED4FDA1CB8D13A",
+    "SRC/release/__init__.py": "B5B09A6CAC378C7FAE42FDD463E9F1569BFF0A361693E0DA99431CCED3CF4E11",
+    "SRC/release/release_binding.py": "9D38294EE63352712FFD0D361447DB6F3DC3F276C844CAC180016CC41545987E",
+    "SRC/release/release_binding_v0_2.py": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "SRC/witness/__init__.py": "BA52444B0509A0D93A1EC315AE664DC75CAA8FF941D80F6DF9137DD36DF2BAF1",
+    "SRC/witness/witness_chain.py": "9002D46D71ED4CBC123605F542FADFBDF28910F1B3FE87A71515E5E4AF02CB90",
+    "SRC/witness/witness_chain_v0_2.py": "7FA3BF233F18AC7E3820AC2D1FEE43F88D5CCB421C7F55CD4E79BD41824A15AD",
+    "TOOLS/run_governance_selftest.py": "A7B32CAA78F82011348480867243BE28EB09FEFEA15CF65C03BE5DEC53542325"
+  },
+  "source_hashes_after": {
+    "SRC/evidence/schema_contract.py": "FBB63926009EF82BDFE7E4BA8E9B8AE05A84F89AFCF50EA0FB8747ED9ED54D2A",
+    "SRC/execution_stub/__init__.py": "12E6E779C091BDE54D921C67450260213BDC16B62C3993B67B093B0B1A4D38E4",
+    "SRC/execution_stub/execution_boundary.py": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5",
+    "SRC/governance/__init__.py": "25205D7EFEFA4F693F894F8239376FA0EC9305216278889ACF3AAEEA2F1D40D4",
+    "SRC/governance/governance_engine.py": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "SRC/latency/__init__.py": "3AC028F3038B8063CBDA354329BCB6DD9A4EED940D935014BE7F6F9114F62ADB",
+    "SRC/latency/latency_measurement.py": "671398811E31BDAE08DACF8227DB4E9ADEF993DD3FECF9CAD071FFC7B453DA89",
+    "SRC/latency/latency_measurement_v0_2.py": "A69C72EB1F4C1C38913F23E34E188F19F076847BFEDD713213ED4FDA1CB8D13A",
+    "SRC/release/__init__.py": "B5B09A6CAC378C7FAE42FDD463E9F1569BFF0A361693E0DA99431CCED3CF4E11",
+    "SRC/release/release_binding.py": "9D38294EE63352712FFD0D361447DB6F3DC3F276C844CAC180016CC41545987E",
+    "SRC/release/release_binding_v0_2.py": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "SRC/witness/__init__.py": "BA52444B0509A0D93A1EC315AE664DC75CAA8FF941D80F6DF9137DD36DF2BAF1",
+    "SRC/witness/witness_chain.py": "9002D46D71ED4CBC123605F542FADFBDF28910F1B3FE87A71515E5E4AF02CB90",
+    "SRC/witness/witness_chain_v0_2.py": "7FA3BF233F18AC7E3820AC2D1FEE43F88D5CCB421C7F55CD4E79BD41824A15AD",
+    "TOOLS/run_governance_selftest.py": "A7B32CAA78F82011348480867243BE28EB09FEFEA15CF65C03BE5DEC53542325"
+  },
+  "original_reference_source_unchanged": true,
+  "snapshot_matches_original": true,
+  "inner_probe_sha256": "8B25E6868FBF74B9F88D7330BF80180090FDC7E6CC203C1919810C4CAE4D0C89",
+  "dockerfile_sha256": "D7C3F1B8DBB3E93E02A614D56ED01BB5E49E58616FC015FF2E5BFCB6CB89D239",
+  "docker_image_id": "sha256:c0457570f66fa67c5e899d39649d5bbc7d2b4d00040fdf3444d98c2a030fab82",
+  "image_tag": "hc01-local-isolation:20261012t114456782644z",
+  "docker_run_security_flags": [
+    "--rm",
+    "--pull=never",
+    "--network",
+    "none",
+    "--read-only",
+    "--cap-drop",
+    "ALL",
+    "--security-opt",
+    "no-new-privileges:true",
+    "--pids-limit",
+    "32",
+    "--memory",
+    "128m",
+    "--user",
+    "10001:10001",
+    "--tmpfs",
+    "/work:rw,nosuid,nodev,size=16m,uid=10001,gid=10001,mode=0700"
+  ],
+  "container_result": {
+    "all_expectations_met": true,
+    "container_checks": {
+      "BASELINE_PERMIT": {
+        "observed": "PERMIT",
+        "passed": true
+      },
+      "CAPABILITIES_ZERO": {
+        "observed": "0000000000000000",
+        "passed": true
+      },
+      "DOCKER_SOCKET_ABSENT": {
+        "observed": "False",
+        "passed": true
+      },
+      "GATE_REVOKED_REFUSED": {
+        "observed": {
+          "execution_result": "REFUSED",
+          "reason_code": "GATE_AUTHORITY_REVOKED"
+        },
+        "passed": true
+      },
+      "HOST_MOUNT_ABSENT": {
+        "observed": "False",
+        "passed": true
+      },
+      "LEGACY_DIRECT_BYPASS_OBSERVED": {
+        "observed": {
+          "markers": 2,
+          "reason": "SIMULATED_EXECUTION_COMPLETED",
+          "result": "COMPLETED"
+        },
+        "passed": true
+      },
+      "NO_IP4_DEFAULT_ROUTE": {
+        "observed": 0,
+        "passed": true
+      },
+      "NO_NEW_PRIVILEGES": {
+        "observed": "1",
+        "passed": true
+      },
+      "ROOT_MOUNT_READONLY": {
+        "observed": true,
+        "passed": true
+      },
+      "SECCOMP_ACTIVE": {
+        "observed": "2",
+        "passed": true
+      },
+      "TMP_READONLY_WITHOUT_MOUNT": {
+        "observed": false,
+        "passed": true
+      },
+      "UID_10001": {
+        "observed": 10001,
+        "passed": true
+      },
+      "UPDATED_REVOKED_AUTHORITY_REFUSED": {
+        "observed": {
+          "markers": 0,
+          "reason": "EXECUTION_REFUSED_RELEASE_INVALID_DETERMINATION_RECONCILIATION_FAILED",
+          "result": "REFUSED"
+        },
+        "passed": true
+      },
+      "VALID_REFERENCE_EXECUTION": {
+        "observed": {
+          "markers": 2,
+          "reason": "SIMULATED_EXECUTION_COMPLETED",
+          "result": "COMPLETED"
+        },
+        "passed": true
+      },
+      "WINDOWS_PATH_ABSENT": {
+        "observed": "False",
+        "passed": true
+      }
+    },
+    "docker_host_admin_bypass_tested": false,
+    "evidence_class": "SYNTHETIC_UNPRIVILEGED_READONLY_NO_NETWORK_CONTAINER",
+    "legacy_direct_bypass_still_possible": true,
+    "production_non_bypassability_established": false,
+    "protected_service_endpoint_tested": false,
+    "simulation_only": true,
+    "test_id": "HC01_DOCKER_ISOLATED_RUNTIME_v0.8",
+    "trusted_healthcare_authority_connected": false
+  },
+  "container_all_expectations_met": true,
+  "trusted_healthcare_authority_connected": false,
+  "external_service_authentication_tested": false,
+  "independent_os_account_isolation_tested": false,
+  "production_non_bypassability_established": false,
+  "original_evidence_rewritten": false
+}

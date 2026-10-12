@@ -1,0 +1,89 @@
+{
+  "test_id": "HC01_MANDATORY_BOUNDARY_v0.5",
+  "evidence_class": "SEPARATE_PROCESS_SYNTHETIC_PROTOCOL_PROBE",
+  "reference_runtime": "AUTOMOTIVE_DERIVED_SIMULATED_STUB",
+  "prior_v04_sha256": "46D2AE984BD8248B059B3F275E752DF54981989DD3C2986A7135A2A18D06BF19",
+  "prior_v04_direct_bypass_still_a_known_gap": true,
+  "probe_script_sha256": "B15819B5C2F49A5B49ED86785FB97F5247E4E499DEADA61492C04041DD55FDBB",
+  "original_source_sha256_before": {
+    "governance": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "release": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "execution": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5",
+    "baseline": "A7B32CAA78F82011348480867243BE28EB09FEFEA15CF65C03BE5DEC53542325"
+  },
+  "original_source_sha256_after": {
+    "governance": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "release": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "execution": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5",
+    "baseline": "A7B32CAA78F82011348480867243BE28EB09FEFEA15CF65C03BE5DEC53542325"
+  },
+  "original_source_unchanged": true,
+  "client_and_service_same_os_identity": true,
+  "protected_os_capability_isolation_established": false,
+  "legacy_stub_remains_directly_callable": true,
+  "authenticated_clients": false,
+  "authenticated_admin_operations": false,
+  "external_authority_source_connected": false,
+  "cryptographic_authenticity_integrated": false,
+  "distributed_atomicity_established": false,
+  "cross_restart_single_use_established": false,
+  "production_non_bypassability_established": false,
+  "healthcare_deployment_validated": false,
+  "real_patient_data": false,
+  "simulation_only": true,
+  "all_seven_protocol_expectations_met": true,
+  "results": {
+    "HC-01O_VALID_SERVICE_REQUEST": {
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "reason_code": "SIMULATED_EXECUTION_COMPLETED",
+      "expectation_met": true,
+      "marker_files": 2
+    },
+    "HC-01P_REVOKED_BEFORE_COMMIT": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_AUTHORITY_REVOKED",
+      "expectation_met": true,
+      "marker_files": 0
+    },
+    "HC-01Q_REACTIVATED_OLD_RELEASE": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_AUTHORITY_GENERATION_CHANGED",
+      "expectation_met": true,
+      "marker_files": 0
+    },
+    "HC-01R_AUTHORITY_UNAVAILABLE": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_AUTHORITY_UNAVAILABLE",
+      "expectation_met": true,
+      "marker_files": 0
+    },
+    "HC-01S_SINGLE_USE": {
+      "expected": "REFUSED_AFTER_ONE_COMPLETED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_RELEASE_ALREADY_USED",
+      "expectation_met": true,
+      "marker_files": 2,
+      "first_result": "COMPLETED",
+      "marker_count_before_replay": 2,
+      "marker_count_after_replay": 2
+    },
+    "HC-01T_HISTORICAL_CALLER_OVERRIDE": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_AUTHORITY_REVOKED",
+      "expectation_met": true,
+      "marker_files": 0
+    },
+    "HC-01U_UNSUPPORTED_DIRECT_COMMAND": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_UNSUPPORTED_COMMAND",
+      "expectation_met": true,
+      "marker_files": 0
+    }
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "test_id": "HC01_PROTECTED_SERVICE_ORCHESTRATOR_v0.9",
+  "evidence_class": "SYNTHETIC_INTERNAL_DOCKER_NETWORK_CLIENT_SERVICE_ISOLATION",
+  "probe_script_sha256": "490517882594E045C1B7006D64C1BD3DA46DD345194A55FC23285075CA0ECF1F",
+  "prior_v08_report_sha256": "1E2C6B9E5F8F8E2699EB7E4899D63E9E57AF78A440422A18F5C35441181E627A",
+  "prior_v08_script_sha256": "CD19175D74202714EE85A8B50F53DEA068FB5C8CD5703428C274019D21CE5E5B",
+  "base_image_id": "sha256:1b668429b3511ab407d8e00648891631b0b1a4d7e15e3ca70f38ab5b91ad4ab4",
+  "service_image_id": "sha256:a5604967ae70e2a6e8a139f0f2b854862c00172c400c0e506a94e9037572ad66",
+  "client_image_id": "sha256:3043dc5330480b693c39cba23e04e941cd746f4cc7df45e1c68a128960edb39f",
+  "test_network": "hc01-v09-5a8bcf-internal",
+  "service_container_name": "hc01-v09-5a8bcf-service",
+  "published_host_ports": [],
+  "runtime_security_flags": [
+    "--read-only",
+    "--cap-drop",
+    "ALL",
+    "--security-opt",
+    "no-new-privileges:true",
+    "--pids-limit",
+    "32",
+    "--memory",
+    "128m",
+    "--user",
+    "10001:10001"
+  ],
+  "source_hashes_before": {
+    "SRC/evidence/schema_contract.py": "FBB63926009EF82BDFE7E4BA8E9B8AE05A84F89AFCF50EA0FB8747ED9ED54D2A",
+    "SRC/execution_stub/__init__.py": "12E6E779C091BDE54D921C67450260213BDC16B62C3993B67B093B0B1A4D38E4",
+    "SRC/execution_stub/execution_boundary.py": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5",
+    "SRC/governance/__init__.py": "25205D7EFEFA4F693F894F8239376FA0EC9305216278889ACF3AAEEA2F1D40D4",
+    "SRC/governance/governance_engine.py": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "SRC/latency/__init__.py": "3AC028F3038B8063CBDA354329BCB6DD9A4EED940D935014BE7F6F9114F62ADB",
+    "SRC/latency/latency_measurement.py": "671398811E31BDAE08DACF8227DB4E9ADEF993DD3FECF9CAD071FFC7B453DA89",
+    "SRC/latency/latency_measurement_v0_2.py": "A69C72EB1F4C1C38913F23E34E188F19F076847BFEDD713213ED4FDA1CB8D13A",
+    "SRC/release/__init__.py": "B5B09A6CAC378C7FAE42FDD463E9F1569BFF0A361693E0DA99431CCED3CF4E11",
+    "SRC/release/release_binding.py": "9D38294EE63352712FFD0D361447DB6F3DC3F276C844CAC180016CC41545987E",
+    "SRC/release/release_binding_v0_2.py": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "SRC/witness/__init__.py": "BA52444B0509A0D93A1EC315AE664DC75CAA8FF941D80F6DF9137DD36DF2BAF1",
+    "SRC/witness/witness_chain.py": "9002D46D71ED4CBC123605F542FADFBDF28910F1B3FE87A71515E5E4AF02CB90",
+    "SRC/witness/witness_chain_v0_2.py": "7FA3BF233F18AC7E3820AC2D1FEE43F88D5CCB421C7F55CD4E79BD41824A15AD",
+    "TOOLS/run_governance_selftest.py": "A7B32CAA78F82011348480867243BE28EB09FEFEA15CF65C03BE5DEC53542325"
+  },
+  "source_hashes_after": {
+    "SRC/evidence/schema_contract.py": "FBB63926009EF82BDFE7E4BA8E9B8AE05A84F89AFCF50EA0FB8747ED9ED54D2A",
+    "SRC/execution_stub/__init__.py": "12E6E779C091BDE54D921C67450260213BDC16B62C3993B67B093B0B1A4D38E4",
+    "SRC/execution_stub/execution_boundary.py": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5",
+    "SRC/governance/__init__.py": "25205D7EFEFA4F693F894F8239376FA0EC9305216278889ACF3AAEEA2F1D40D4",
+    "SRC/governance/governance_engine.py": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "SRC/latency/__init__.py": "3AC028F3038B8063CBDA354329BCB6DD9A4EED940D935014BE7F6F9114F62ADB",
+    "SRC/latency/latency_measurement.py": "671398811E31BDAE08DACF8227DB4E9ADEF993DD3FECF9CAD071FFC7B453DA89",
+    "SRC/latency/latency_measurement_v0_2.py": "A69C72EB1F4C1C38913F23E34E188F19F076847BFEDD713213ED4FDA1CB8D13A",
+    "SRC/release/__init__.py": "B5B09A6CAC378C7FAE42FDD463E9F1569BFF0A361693E0DA99431CCED3CF4E11",
+    "SRC/release/release_binding.py": "9D38294EE63352712FFD0D361447DB6F3DC3F276C844CAC180016CC41545987E",
+    "SRC/release/release_binding_v0_2.py": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "SRC/witness/__init__.py": "BA52444B0509A0D93A1EC315AE664DC75CAA8FF941D80F6DF9137DD36DF2BAF1",
+    "SRC/witness/witness_chain.py": "9002D46D71ED4CBC123605F542FADFBDF28910F1B3FE87A71515E5E4AF02CB90",
+    "SRC/witness/witness_chain_v0_2.py": "7FA3BF233F18AC7E3820AC2D1FEE43F88D5CCB421C7F55CD4E79BD41824A15AD",
+    "TOOLS/run_governance_selftest.py": "A7B32CAA78F82011348480867243BE28EB09FEFEA15CF65C03BE5DEC53542325"
+  },
+  "original_reference_source_unchanged": true,
+  "snapshot_matches_original": true,
+  "service_script_sha256": "ED3BE75C6CEC874CEE0CE7CA0E7432F064645FDE48825EA5CEB49B3C684C3E7A",
+  "client_script_sha256": "638067639D626374542835A4A004DD106CF759236CD5148B32C98AB06BFA35B4",
+  "admin_script_sha256": "2DFA0DB25C41F5804A53A082922B4036D7E02306B0ECEC39B526EDF5E876526D",
+  "service_dockerfile_sha256": "1717F73239DCD9A71C1DD97B1196D8E07EB81F1B455FAF982F8D5C987971885A",
+  "client_dockerfile_sha256": "ACF3458DA8AFDA9921CDC1922182E568517D622F75DB57185CFB463020B668EC",
+  "checks": {
+    "SERVICE_INITIAL_STATE": {
+      "passed": true,
+      "observed": {
+        "authority": "ACTIVE",
+        "consumed": false,
+        "executions": 0,
+        "generation": 1,
+        "markers": 0,
+        "status": "READY"
+      }
+    },
+    "CLIENT_NO_PRIVATE_SOURCE": {
+      "passed": true,
+      "observed": {
+        "docker_socket_visible": false,
+        "host_mount_visible": false,
+        "legacy_module_importable": false,
+        "private_source_present": false,
+        "uid": 10001,
+        "windows_path_visible": false
+      }
+    },
+    "CLIENT_NO_DOCKER_SOCKET": {
+      "passed": true,
+      "observed": false
+    },
+    "CLIENT_UNPRIVILEGED": {
+      "passed": true,
+      "observed": 10001
+    },
+    "CLIENT_NO_COMMON_HOST_PATHS": {
+      "passed": true,
+      "observed": {
+        "docker_socket_visible": false,
+        "host_mount_visible": false,
+        "legacy_module_importable": false,
+        "private_source_present": false,
+        "uid": 10001,
+        "windows_path_visible": false
+      }
+    },
+    "INVALID_CLIENT_REFUSED": {
+      "passed": true,
+      "observed": {
+        "execution_result": "REFUSED",
+        "reason_code": "GATE_CLIENT_AUTH_INVALID"
+      }
+    },
+    "DIRECT_UNSIGNED_EXECUTION_REFUSED": {
+      "passed": true,
+      "observed": {
+        "execution_result": "REFUSED",
+        "reason_code": "GATE_TOKEN_FORMAT_INVALID"
+      }
+    },
+    "LEGACY_ENDPOINT_NOT_EXPOSED": {
+      "passed": true,
+      "observed": {
+        "body": {
+          "error": "NOT_FOUND"
+        },
+        "http_status": 404
+      }
+    },
+    "UNAUTHORISED_ADMIN_REFUSED": {
+      "passed": true,
+      "observed": {
+        "execution_result": "REFUSED",
+        "reason_code": "GATE_ADMIN_AUTH_INVALID"
+      }
+    },
+    "FORGED_TOKEN_REFUSED": {
+      "passed": true,
+      "observed": {
+        "execution_result": "REFUSED",
+        "reason_code": "GATE_TOKEN_FORMAT_INVALID"
+      }
+    },
+    "PREFLIGHT_VALID_TOKEN": {
+      "passed": true,
+      "observed": "token_issued=True"
+    },
+    "CROSS_CLIENT_TOKEN_REFUSED": {
+      "passed": true,
+      "observed": {
+        "execution_result": "REFUSED",
+        "reason_code": "GATE_TOKEN_CLIENT_MISMATCH"
+      }
+    },
+    "HOST_REVOKE_ACCEPTED": {
+      "passed": true,
+      "observed": {
+        "action": "revoke",
+        "generation": 2,
+        "status": "ADMIN_CHANGE_ACCEPTED"
+      }
+    },
+    "POST_REVOKE_EXECUTION_REFUSED": {
+      "passed": true,
+      "observed": {
+        "execution_result": "REFUSED",
+        "reason_code": "GATE_AUTHORITY_REVOKED"
+      }
+    },
+    "REVOKED_PREFLIGHT_REFUSED": {
+      "passed": true,
+      "observed": {
+        "execution_result": "REFUSED",
+        "reason_code": "GATE_AUTHORITY_REVOKED"
+      }
+    },
+    "HOST_REACTIVATION_ACCEPTED": {
+      "passed": true,
+      "observed": {
+        "action": "reactivate",
+        "generation": 3,
+        "status": "ADMIN_CHANGE_ACCEPTED"
+      }
+    },
+    "OLD_GENERATION_TOKEN_REFUSED": {
+      "passed": true,
+      "observed": {
+        "execution_result": "REFUSED",
+        "reason_code": "GATE_AUTHORITY_GENERATION_CHANGED"
+      }
+    },
+    "REACTIVATED_PREFLIGHT_ACCEPTED": {
+      "passed": true,
+      "observed": "token_issued=True"
+    },
+    "GATED_VALID_EXECUTION_COMPLETED": {
+      "passed": true,
+      "observed": {
+        "execution_result": "COMPLETED",
+        "markers": 2,
+        "reason_code": "SIMULATED_EXECUTION_COMPLETED"
+      }
+    },
+    "TOKEN_REPLAY_REFUSED": {
+      "passed": true,
+      "observed": {
+        "execution_result": "REFUSED",
+        "reason_code": "GATE_RELEASE_ALREADY_USED"
+      }
+    },
+    "SERVER_SINGLE_EXECUTION_OBSERVED": {
+      "passed": true,
+      "observed": {
+        "authority": "ACTIVE",
+        "consumed": true,
+        "executions": 1,
+        "generation": 3,
+        "markers": 2,
+        "status": "READY"
+      }
+    },
+    "HOST_OPERATOR_LEGACY_IMPORT_OBSERVED": {
+      "passed": true,
+      "observed": "HOST_EXEC_CAN_IMPORT_LEGACY=YES"
+    }
+  },
+  "checks_count": 22,
+  "all_expectations_met": true,
+  "failure": null,
+  "host_operator_can_import_legacy_execution": true,
+  "real_healthcare_authority_connected": false,
+  "real_patient_records_used": false,
+  "revocation_persistent_across_restart_tested": false,
+  "independent_host_admin_isolation_established": false,
+  "tls_network_transport_established": false,
+  "production_non_bypassability_established": false,
+  "original_evidence_rewritten": false,
+  "host_operator_test_changes": [
+    {
+      "source": "HOST_OPERATOR_DOCKER_EXEC",
+      "action": "revoke",
+      "result": "ADMIN_CHANGE_ACCEPTED"
+    },
+    {
+      "source": "HOST_OPERATOR_DOCKER_EXEC",
+      "action": "reactivate",
+      "result": "ADMIN_CHANGE_ACCEPTED"
+    }
+  ]
+}

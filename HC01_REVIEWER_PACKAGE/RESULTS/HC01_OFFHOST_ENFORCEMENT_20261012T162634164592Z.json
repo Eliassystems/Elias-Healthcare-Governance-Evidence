@@ -1,0 +1,98 @@
+{
+  "all_expectations_met": true,
+  "checks": {
+    "HOST_BYPASS_REMAINS_OUT_OF_SCOPE": {
+      "observed": {
+        "host_operator_code_control": true,
+        "legacy_execution_path_not_protected": true
+      },
+      "passed": true
+    },
+    "LIVE_REMOTE_REVOKED_PREFLIGHT_AND_EXECUTION_REFUSED": {
+      "observed": {
+        "consumed": false,
+        "execute": "GATE_REMOTE_AUTHORITY_REVOKED",
+        "executions": 0,
+        "markers": 0,
+        "preflight": "GATE_REMOTE_AUTHORITY_REVOKED"
+      },
+      "passed": true
+    },
+    "ORIGINAL_SOURCES_AND_ARCHIVE_UNCHANGED": {
+      "observed": {
+        "prior_hashes_match": true,
+        "reference_snapshots_match": true
+      },
+      "passed": true
+    },
+    "REMOTE_SIGNATURE_MUTATED_PREFLIGHT_AND_EXECUTION_REFUSED": {
+      "observed": {
+        "consumed": false,
+        "execute": "GATE_REMOTE_SIGNATURE_INVALID",
+        "executions": 0,
+        "markers": 0,
+        "preflight": "GATE_REMOTE_SIGNATURE_INVALID"
+      },
+      "passed": true
+    },
+    "REMOTE_UNREACHABLE_PREFLIGHT_AND_EXECUTION_REFUSED": {
+      "observed": {
+        "consumed": false,
+        "execute": "GATE_REMOTE_UNAVAILABLE",
+        "executions": 0,
+        "markers": 0,
+        "preflight": "GATE_REMOTE_UNAVAILABLE"
+      },
+      "passed": true
+    },
+    "SOURCE_PATCHED_MANDATORY_GATE": {
+      "observed": {
+        "service_sha256": "8149B82BD362AB62B192F39AB885F468EF6E4D7B80CEF696BA4225F9D9593C07"
+      },
+      "passed": true
+    }
+  },
+  "checks_count": 6,
+  "derived_v10_source_sha256": "0B3AEABB83C1CC0ECD8954DDD10B09E879D3D4AE4FB50E9C97595FB568BB3F80",
+  "docker_scenarios": [
+    {
+      "container_id": "102bd13e018b803e54ee4f9e6e7ceda074ec77fcf55bb6cb7f0d8b2b33b7182c",
+      "label": "LIVE_REMOTE_REVOKED",
+      "local_health_ready": true,
+      "published_host_ports": [],
+      "volume_name": "hc01-v15-68145a-LIVE_REMOTE_REVOKED-vol"
+    },
+    {
+      "container_id": "3cba27be5ceaa0d760d7cc498d1f58eb1308b4733057a6aa16008876fffacc8b",
+      "label": "REMOTE_UNREACHABLE",
+      "local_health_ready": true,
+      "published_host_ports": [],
+      "volume_name": "hc01-v15-68145a-REMOTE_UNREACHABLE-vol"
+    },
+    {
+      "container_id": "7751e26c5daf9b5e62b368174cc46b48c4173feb692c4580141dc4b354d9688f",
+      "label": "REMOTE_SIGNATURE_MUTATED",
+      "local_health_ready": true,
+      "published_host_ports": [],
+      "volume_name": "hc01-v15-68145a-REMOTE_SIGNATURE_MUTATED-vol"
+    }
+  ],
+  "evidence_scope": "SYNTHETIC_DOCKER_SIGNED_OFFHOST_REVOCATION_NEGATIVE_PATH_ONLY",
+  "failure": null,
+  "generated_dockerfile_sha256": "5EDB4D42894F795AA1CC02FA630BF501A8DF4FEB9C03AE71BD955FB075B26444",
+  "generated_service_sha256": "8149B82BD362AB62B192F39AB885F468EF6E4D7B80CEF696BA4225F9D9593C07",
+  "independent_administrative_control_established": false,
+  "live_remote_active_positive_execution_tested": false,
+  "negative_path_remote_revocation_enforced": true,
+  "original_evidence_rewritten": false,
+  "pinned_remote_public_key_sha256": "4E9587F1F81E1505F51D4DBB4CF23F6EAC5A31A13CA46D1EE0AC760D95BAD837",
+  "production_non_bypassability_established": false,
+  "real_healthcare_authority_connected": false,
+  "real_patient_records_used": false,
+  "remote_endpoint": "https://hc01-v014-synthetic-authority.onrender.com/v1/authority",
+  "source_sha256": "B6745972E1F1FE240471E26EAF5565096272CEBF7E9E2DAACE2B55E3D7182AAA",
+  "test_id": "HC01_V015_REMOTE_MANDATORY_REFUSAL",
+  "test_network_outbound_https": true,
+  "v14_archive_sha256": "8ACED279B1AFE555EC77F86E0D8B97705A860068A0A4874C21C8213DD9DD919B",
+  "valid_previously_issued_token_under_remote_revocation_tested": false
+}

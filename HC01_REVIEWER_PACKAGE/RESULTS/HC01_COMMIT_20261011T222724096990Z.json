@@ -1,0 +1,96 @@
+{
+  "test_id": "HC01_AUTHORITY_COMMIT_v0.4",
+  "evidence_class": "SYNTHETIC_IN_PROCESS_COMMIT_GATE",
+  "prior_v03_report_sha256": "BBFBAACD8335EE4ED402A650BD6D1415705A3B64D64B59DE575622D0A683456B",
+  "test_script_sha256": "C0CD7AE547EE55CB2120F7783A165C90B6662C33B2E4FFA40B88F32897E88E62",
+  "source_sha256_before": {
+    "governance": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "release": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "execution": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5"
+  },
+  "source_sha256_after": {
+    "governance": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "release": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "execution": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5"
+  },
+  "source_unchanged": true,
+  "in_process_lock_used": true,
+  "external_authority_connected": false,
+  "distributed_atomicity_established": false,
+  "cryptographic_authenticity_integrated": false,
+  "production_non_bypassability_established": false,
+  "real_patient_data": false,
+  "simulation_only": true,
+  "gate_expectations_met": true,
+  "direct_bypass_refused": false,
+  "results": {
+    "HC-01I_VALID_COMMIT": {
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "reason_code": "SIMULATED_EXECUTION_COMPLETED",
+      "expectation_met": true,
+      "preflight": null,
+      "authority_events": [
+        "INITIAL_ACTIVE_GENERATION_1",
+        "SIMULATED_COMMIT"
+      ],
+      "execution_marker_files": 2
+    },
+    "HC-01J_REVOKED_BETWEEN_CHECKS": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_AUTHORITY_REVOKED",
+      "expectation_met": true,
+      "preflight": {
+        "status": "ACTIVE",
+        "generation": 1,
+        "available": true
+      },
+      "authority_events": [
+        "INITIAL_ACTIVE_GENERATION_1",
+        "AUTHORITY_REVOKED"
+      ],
+      "execution_marker_files": 0
+    },
+    "HC-01K_REACTIVATED_OLD_APPROVAL": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_AUTHORITY_GENERATION_CHANGED",
+      "expectation_met": true,
+      "preflight": null,
+      "authority_events": [
+        "INITIAL_ACTIVE_GENERATION_1",
+        "AUTHORITY_REVOKED",
+        "AUTHORITY_REACTIVATED"
+      ],
+      "execution_marker_files": 0
+    },
+    "HC-01L_AUTHORITY_UNAVAILABLE": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_AUTHORITY_UNAVAILABLE",
+      "expectation_met": true,
+      "preflight": null,
+      "authority_events": [
+        "INITIAL_ACTIVE_GENERATION_1",
+        "AUTHORITY_UNAVAILABLE"
+      ],
+      "execution_marker_files": 0
+    },
+    "HC-01M_SINGLE_USE": {
+      "first": "COMPLETED",
+      "second": "REFUSED",
+      "second_reason": "GATE_RELEASE_ALREADY_USED",
+      "expectation_met": true,
+      "markers_unchanged_after_replay": true
+    },
+    "HC-01N_DIRECT_BYPASS": {
+      "expected": "REFUSED",
+      "actual": "COMPLETED",
+      "reason_code": "SIMULATED_EXECUTION_COMPLETED",
+      "expectation_met": false,
+      "gate_invoked": false,
+      "synthetic_registry_state": "REVOKED"
+    }
+  }
+}

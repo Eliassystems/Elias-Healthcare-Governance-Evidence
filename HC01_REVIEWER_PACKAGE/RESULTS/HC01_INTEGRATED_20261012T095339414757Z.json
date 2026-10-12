@@ -1,0 +1,135 @@
+{
+  "test_id": "HC01_INTEGRATED_AUTHORITY_BOUNDARY_v0.6",
+  "evidence_class": "SYNTHETIC_SEPARATE_PROCESS_PROTOCOL_HMAC_AND_COMMIT_TEST",
+  "probe_script_sha256": "A565F7BF4F01DEA8477224EDCEA02E782DD1CCAFC8F6FD81101E03522DD8DB57",
+  "previous_v05_report_sha256": "A589A5DF26E659FA85F6F27DBAB57ED58E53081FA63BDC32EA3D8F2211A79A3E",
+  "previous_v05_script_sha256": "B15819B5C2F49A5B49ED86785FB97F5247E4E499DEADA61492C04041DD55FDBB",
+  "source_hashes_before": {
+    "governance": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "release": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "execution": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5",
+    "baseline": "A7B32CAA78F82011348480867243BE28EB09FEFEA15CF65C03BE5DEC53542325"
+  },
+  "source_hashes_after": {
+    "governance": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "release": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "execution": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5",
+    "baseline": "A7B32CAA78F82011348480867243BE28EB09FEFEA15CF65C03BE5DEC53542325"
+  },
+  "source_unchanged": true,
+  "all_expectations_met": true,
+  "independent_external_authority_issuer_established": false,
+  "production_client_authentication_established": false,
+  "production_admin_authentication_established": false,
+  "service_and_client_same_os_identity": true,
+  "legacy_execution_stub_still_directly_callable": true,
+  "os_capability_isolation_established": false,
+  "durable_cross_restart_consumption_established": false,
+  "distributed_atomicity_established": false,
+  "production_non_bypassability_established": false,
+  "healthcare_deployment_validated": false,
+  "synthetic_simulated_execution_only": true,
+  "real_patient_data": false,
+  "results": {
+    "HC-01V_VALID_SIGNED_TOKEN": {
+      "expected": "COMPLETED",
+      "expected_reason": "SIMULATED_EXECUTION_COMPLETED",
+      "actual": "COMPLETED",
+      "reason_code": "SIMULATED_EXECUTION_COMPLETED",
+      "expectation_met": true,
+      "execution_marker_files": 2,
+      "audit_sha256": "31B8D97CF4D0F7156237F37E540A6C267CB0E2DC09F6CF7D9C0DB6599B8CFA0D"
+    },
+    "HC-01W_TAMPERED_SIGNED_TOKEN": {
+      "expected": "REFUSED",
+      "expected_reason": "GATE_TOKEN_MAC_INVALID",
+      "actual": "REFUSED",
+      "reason_code": "GATE_TOKEN_MAC_INVALID",
+      "expectation_met": true,
+      "execution_marker_files": 0,
+      "audit_sha256": "224C78B7EAA8A4775EE53FDDE6D0F99B6EB4A85D40178745A5C60C0DB32AC4AF"
+    },
+    "HC-01X_FORGED_UNSIGNED_TOKEN": {
+      "expected": "REFUSED",
+      "expected_reason": "GATE_TOKEN_MAC_INVALID",
+      "actual": "REFUSED",
+      "reason_code": "GATE_TOKEN_MAC_INVALID",
+      "expectation_met": true,
+      "execution_marker_files": 0,
+      "audit_sha256": "224C78B7EAA8A4775EE53FDDE6D0F99B6EB4A85D40178745A5C60C0DB32AC4AF"
+    },
+    "HC-01Y_REVOKED_BEFORE_COMMIT": {
+      "expected": "REFUSED",
+      "expected_reason": "GATE_AUTHORITY_REVOKED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_AUTHORITY_REVOKED",
+      "expectation_met": true,
+      "execution_marker_files": 0,
+      "audit_sha256": "5A3EF1D6D1859A9CB54B321F7BC8A3B3320B48E7A368349DE3370659851AA2E2"
+    },
+    "HC-01Z_REACTIVATED_OLD_GENERATION": {
+      "expected": "REFUSED",
+      "expected_reason": "GATE_AUTHORITY_GENERATION_CHANGED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_AUTHORITY_GENERATION_CHANGED",
+      "expectation_met": true,
+      "execution_marker_files": 0,
+      "audit_sha256": "0F27A6AF43076D37C5F1351FCBA002C8F38830FBCAFC48C589B13425B8085DCC"
+    },
+    "HC-01AA_UNAVAILABLE_AUTHORITY": {
+      "expected": "REFUSED",
+      "expected_reason": "GATE_AUTHORITY_UNAVAILABLE",
+      "actual": "REFUSED",
+      "reason_code": "GATE_AUTHORITY_UNAVAILABLE",
+      "expectation_met": true,
+      "execution_marker_files": 0,
+      "audit_sha256": "8619EFF4ACDEF2AD7F80308BA761EECC3880416527C0CBB66D959B1E67B658AB"
+    },
+    "HC-01AB_FORGED_CALLER_AUTHORITY": {
+      "expected": "REFUSED",
+      "expected_reason": "GATE_AUTHORITY_REVOKED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_AUTHORITY_REVOKED",
+      "expectation_met": true,
+      "execution_marker_files": 0,
+      "audit_sha256": "5A3EF1D6D1859A9CB54B321F7BC8A3B3320B48E7A368349DE3370659851AA2E2"
+    },
+    "HC-01AC_UNSUPPORTED_DIRECT_COMMAND": {
+      "expected": "REFUSED",
+      "expected_reason": "GATE_UNSUPPORTED_COMMAND",
+      "actual": "REFUSED",
+      "reason_code": "GATE_UNSUPPORTED_COMMAND",
+      "expectation_met": true,
+      "execution_marker_files": 0,
+      "audit_sha256": "5DAFE2036A34F3E1356B9D6D6619738EEA13D9929F138B886E2B68592060BFB2"
+    },
+    "HC-01AD_BOGUS_ADMIN_CREDENTIAL": {
+      "expected": "REJECT_ADMIN_THEN_VALID_EXECUTION",
+      "admin_result": "REFUSED",
+      "actual": "COMPLETED",
+      "reason_code": "GATE_ADMIN_CREDENTIAL_INVALID",
+      "expectation_met": true,
+      "execution_marker_files": 2,
+      "audit_sha256": "9C966B261C56AC70C9A9A5EE7D009D71FECAC0C0607C722F0085DFEADC2D9213"
+    },
+    "HC-01AE_SINGLE_USE": {
+      "expected": "COMPLETED_ONCE_THEN_REFUSED",
+      "first": "COMPLETED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_RELEASE_ALREADY_USED",
+      "expectation_met": true,
+      "markers_before_replay": 2,
+      "markers_after_replay": 2,
+      "audit_sha256": "AC41DD45686DDB9B00C26B36D8647683A73E91F33C98D67C65978C4B050BDD71"
+    },
+    "HC-01AF_OTHER_SERVICE_TOKEN": {
+      "expected": "REFUSED",
+      "expected_reason": "GATE_TOKEN_MAC_INVALID",
+      "actual": "REFUSED",
+      "reason_code": "GATE_TOKEN_MAC_INVALID",
+      "expectation_met": true,
+      "execution_marker_files": 0,
+      "audit_sha256": "224C78B7EAA8A4775EE53FDDE6D0F99B6EB4A85D40178745A5C60C0DB32AC4AF"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "test_id": "HC01_AUTHENTICITY_v0.3",
+  "evidence_class": "SYNTHETIC_HMAC_GATE_TEST",
+  "external_authority_connected": false,
+  "production_trust_established": false,
+  "post_signing_revocation_feed": false,
+  "cryptographic_method": "HMAC_SHA256_TEST_ONLY",
+  "authentication_key_persisted": false,
+  "healthcare_deployment_validated": false,
+  "simulation_only": true,
+  "source_hashes_before": {
+    "governance": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "release": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "execution": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5"
+  },
+  "source_hashes_after": {
+    "governance": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "release": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "execution": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5"
+  },
+  "source_unchanged": true,
+  "post_signing_truth_sha256": "42E11E2BF04CE46B4C53852A19989CFCEEACD2A95476E84D9F2C4A7D3C2EEF29",
+  "all_expectations_met": false,
+  "results": {
+    "HC-01A_VALID_SIGNED": {
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "reason_code": "SIMULATED_EXECUTION_COMPLETED",
+      "expectation_met": true,
+      "execution_markers": 2,
+      "record_sha256": "19B8EF0FC656F01B08569336FFF6840D4F60C27951CABCD70FAF5279BFD086CB"
+    },
+    "HC-01B_SIGNED_REVOKED": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "AUTH_NOT_CURRENT",
+      "expectation_met": true,
+      "execution_markers": 0,
+      "record_sha256": "7EFB210306410CCE464C81CED553AA6C2BB40CCBD121BA2C6E02506E107C0E05"
+    },
+    "HC-01C_HISTORICAL_REPLAY": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "AUTH_NOT_CURRENT",
+      "expectation_met": true,
+      "execution_markers": 0,
+      "record_sha256": "7EFB210306410CCE464C81CED553AA6C2BB40CCBD121BA2C6E02506E107C0E05"
+    },
+    "HC-01D_SOURCE_UNAVAILABLE": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "AUTH_UNAVAILABLE_OR_INVALID",
+      "expectation_met": true,
+      "execution_markers": 0,
+      "record_sha256": null
+    },
+    "HC-01E_STALE_SIGNED_RECORD": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "AUTH_RECORD_TOO_OLD",
+      "expectation_met": true,
+      "execution_markers": 0,
+      "record_sha256": "37E2B921128A20714CA8258C7610392E59427C2C4F8572A332F4E87E86B3D47F"
+    },
+    "HC-01F_SIGNED_SUPERSEDED": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "AUTH_NOT_CURRENT",
+      "expectation_met": true,
+      "execution_markers": 0,
+      "record_sha256": "E542E244EE1AAE63A441F7239301C637CB45481DB3FF6A9951CC7D939A22F77B"
+    },
+    "HC-01G_FORGED_ACTIVE": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "AUTH_MAC_INVALID",
+      "expectation_met": true,
+      "execution_markers": 0,
+      "record_sha256": "2A90FABBE47FE6B59896A90C28CC757F0DBDB871C1662CA164ABF7B1E57A6712"
+    },
+    "HC-01H_POST_SIGNING_REVOCATION": {
+      "expected": "REFUSED",
+      "actual": "COMPLETED",
+      "reason_code": "SIMULATED_EXECUTION_COMPLETED",
+      "expectation_met": false,
+      "execution_markers": 2,
+      "record_sha256": "19B8EF0FC656F01B08569336FFF6840D4F60C27951CABCD70FAF5279BFD086CB"
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "test_id": "HC01_CLIENT_AUTH_RESTART_v0.7",
+  "evidence_class": "SYNTHETIC_SEPARATE_PROCESS_CLIENT_AUTH_AND_LOCAL_RESTART",
+  "probe_script_sha256": "3DE79FD9417A0EB662F066C25B59034FF6C8AB6EDB35150F6888C4F9E5B6E3C6",
+  "prior_v06_report_sha256": "193EC3AEE99131F3ACE4F41A0F2CE55D5978110A312926892D9FE9797582788B",
+  "prior_v06_script_sha256": "A565F7BF4F01DEA8477224EDCEA02E782DD1CCAFC8F6FD81101E03522DD8DB57",
+  "source_hashes_before": {
+    "governance": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "release": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "execution": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5",
+    "baseline": "A7B32CAA78F82011348480867243BE28EB09FEFEA15CF65C03BE5DEC53542325"
+  },
+  "source_hashes_after": {
+    "governance": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "release": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "execution": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5",
+    "baseline": "A7B32CAA78F82011348480867243BE28EB09FEFEA15CF65C03BE5DEC53542325"
+  },
+  "source_unchanged": true,
+  "all_expectations_met": true,
+  "local_file_claim_before_simulated_execution": true,
+  "local_restart_persistence_tested": true,
+  "same_os_account_for_parent_and_child": true,
+  "credentials_inherited_in_child_environment": true,
+  "persistent_state_writable_by_current_user": true,
+  "external_authority_connected": false,
+  "os_isolation_established": false,
+  "tamper_resistant_storage_established": false,
+  "cross_process_concurrent_writer_safety_established": false,
+  "legacy_stub_direct_bypass_remains_possible": true,
+  "production_non_bypassability_established": false,
+  "healthcare_deployment_validated": false,
+  "real_patient_data": false,
+  "simulation_only": true,
+  "results": {
+    "HC-01AG_AUTHENTICATED_CONTROL": {
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "reason_code": "SIMULATED_EXECUTION_COMPLETED",
+      "expectation_met": true,
+      "marker_files": 2
+    },
+    "HC-01AH_UNAUTHENTICATED_PREFLIGHT": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_CLIENT_UNKNOWN",
+      "expectation_met": true,
+      "marker_files": 0
+    },
+    "HC-01AI_INVALID_CLIENT_CREDENTIAL": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_CLIENT_AUTH_INVALID",
+      "expectation_met": true,
+      "marker_files": 0
+    },
+    "HC-01AJ_STOLEN_TOKEN_NO_CLIENT_AUTH": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_CLIENT_UNKNOWN",
+      "expectation_met": true,
+      "marker_files": 0
+    },
+    "HC-01AK_CROSS_CLIENT_TOKEN": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_TOKEN_CLIENT_MISMATCH",
+      "expectation_met": true,
+      "marker_files": 0
+    },
+    "HC-01AL_REVOKED_AFTER_TOKEN": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_AUTHORITY_REVOKED",
+      "expectation_met": true,
+      "marker_files": 0
+    },
+    "HC-01AM_REACTIVATED_OLD_RELEASE": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_AUTHORITY_GENERATION_CHANGED",
+      "expectation_met": true,
+      "marker_files": 0
+    },
+    "HC-01AN_TAMPERED_TOKEN": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_TOKEN_MAC_INVALID",
+      "expectation_met": true,
+      "marker_files": 0
+    },
+    "HC-01AO_AUTHORITY_UNAVAILABLE": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_AUTHORITY_UNAVAILABLE",
+      "expectation_met": true,
+      "marker_files": 0
+    },
+    "HC-01AP_UNSUPPORTED_SERVICE_COMMAND": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_UNSUPPORTED_COMMAND",
+      "expectation_met": true,
+      "marker_files": 0
+    },
+    "HC-01AQ_BOGUS_SHUTDOWN": {
+      "expected": "REJECT_SHUTDOWN_ALLOW_VALID",
+      "actual": "COMPLETED",
+      "reason_code": "GATE_SHUTDOWN_AUTH_INVALID",
+      "expectation_met": true,
+      "marker_files": 2,
+      "shutdown_refused": true
+    },
+    "HC-01AR_CONSUMPTION_PERSISTS_RESTART": {
+      "expected": "COMPLETED_ONCE_THEN_REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_RELEASE_ALREADY_USED",
+      "expectation_met": true,
+      "marker_files": 2,
+      "first_result": "COMPLETED",
+      "markers_equal": true
+    },
+    "HC-01AS_PRE_RESTART_TOKEN": {
+      "expected": "OLD_REFUSED_NEW_COMPLETED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_TOKEN_MAC_INVALID",
+      "expectation_met": true,
+      "marker_files": 2,
+      "fresh_result": "COMPLETED"
+    },
+    "HC-01AT_REVOCATION_PERSISTS_RESTART": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "GATE_AUTHORITY_REVOKED",
+      "expectation_met": true,
+      "marker_files": 0
+    }
+  }
+}

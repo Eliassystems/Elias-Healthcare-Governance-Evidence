@@ -1,0 +1,235 @@
+{
+  "admin_script_sha256": "2DFA0DB25C41F5804A53A082922B4036D7E02306B0ECEC39B526EDF5E876526D",
+  "all_expectations_met": true,
+  "base_image_id": "sha256:1b668429b3511ab407d8e00648891631b0b1a4d7e15e3ca70f38ab5b91ad4ab4",
+  "checks": {
+    "A_CONSUMPTION_PERSISTS_DOCKER_RESTART": {
+      "observed": {
+        "consumed": true,
+        "executions": 1,
+        "markers_after": 2,
+        "markers_before": 2,
+        "preflight_refusal": "GATE_RELEASE_ALREADY_USED",
+        "replay_refusal": "GATE_RELEASE_ALREADY_USED"
+      },
+      "passed": true
+    },
+    "A_FIRST_EXECUTION": {
+      "observed": {
+        "execution_result": "COMPLETED",
+        "executions": 1,
+        "markers": 2
+      },
+      "passed": true
+    },
+    "A_PREFLIGHT_BEFORE_RESTART": {
+      "observed": "token_issued=True",
+      "passed": true
+    },
+    "B_OLD_TOKEN_INVALID_NEW_EXECUTION_VALID": {
+      "observed": {
+        "executions": 1,
+        "fresh_result": "COMPLETED",
+        "old_token_refusal": "GATE_TOKEN_MAC_INVALID"
+      },
+      "passed": true
+    },
+    "B_TOKEN_BEFORE_RESTART": {
+      "observed": "token_issued=True",
+      "passed": true
+    },
+    "CLIENT_REFERENCE_ABSENT": {
+      "observed": "client_no_private_reference=True",
+      "passed": true
+    },
+    "CLIENT_UNPRIVILEGED_NO_SOCKET": {
+      "observed": "client_uid=10001",
+      "passed": true
+    },
+    "C_REACTIVATION_GENERATION_PERSISTS": {
+      "observed": {
+        "authority": "ACTIVE",
+        "fresh_execution": "COMPLETED",
+        "generation": 3,
+        "old_token_refusal": "GATE_TOKEN_MAC_INVALID"
+      },
+      "passed": true
+    },
+    "C_REVOKED_AFTER_DOCKER_RESTART": {
+      "observed": {
+        "authority": "REVOKED",
+        "execute_refusal": "GATE_AUTHORITY_REVOKED",
+        "generation": 2,
+        "markers": 0,
+        "preflight_refusal": "GATE_AUTHORITY_REVOKED"
+      },
+      "passed": true
+    },
+    "C_REVOKE_PERSISTED_PRE_RESTART": {
+      "observed": "generation=2",
+      "passed": true
+    },
+    "D_CORRUPTED_DURABLE_STATE_FAILS_CLOSED": {
+      "observed": {
+        "service_exited": true,
+        "startup_invalid_state_detected": true
+      },
+      "passed": true
+    },
+    "D_HOST_LEGACY_IMPORT_POSSIBLE": {
+      "observed": "host_operator_can_import_legacy=True",
+      "passed": true
+    }
+  },
+  "checks_count": 12,
+  "client_dockerfile_sha256": "ACF3458DA8AFDA9921CDC1922182E568517D622F75DB57185CFB463020B668EC",
+  "client_image_id": "sha256:560d5397b2f8c1cb79454274187857a78ca463a514353f39a025e8afbc4fa1a8",
+  "client_script_sha256": "872339FB5DA082A4CAB16D4C86E50EE10807FC0402EFB39A27B52AF9649A9946",
+  "consumption_persistent_across_docker_restart_established_within_scope": true,
+  "distributed_concurrent_writer_safety_established": false,
+  "docker_named_volumes": {
+    "A": {
+      "container": "hc01-v10-5360f2-a-service",
+      "no_published_host_ports": true,
+      "storage_host_operator_controlled": true,
+      "volume": "hc01-v10-5360f2-a-state"
+    },
+    "B": {
+      "container": "hc01-v10-5360f2-b-service",
+      "no_published_host_ports": true,
+      "storage_host_operator_controlled": true,
+      "volume": "hc01-v10-5360f2-b-state"
+    },
+    "C": {
+      "container": "hc01-v10-5360f2-c-service",
+      "no_published_host_ports": true,
+      "storage_host_operator_controlled": true,
+      "volume": "hc01-v10-5360f2-c-state"
+    },
+    "D": {
+      "container": "hc01-v10-5360f2-d-service",
+      "no_published_host_ports": true,
+      "storage_host_operator_controlled": true,
+      "volume": "hc01-v10-5360f2-d-state"
+    }
+  },
+  "docker_restart_count": 4,
+  "docker_restart_persistence_tested": true,
+  "docker_restart_records": [
+    {
+      "boot_id_changed": true,
+      "container": "hc01-v10-5360f2-a-service",
+      "new_boot_id": "5aac4ef16630d403e832254e227c269d",
+      "old_boot_id": "477c08b3d415515066dacbba17c504dc",
+      "same_container_id": true,
+      "started_at_changed": true
+    },
+    {
+      "boot_id_changed": true,
+      "container": "hc01-v10-5360f2-b-service",
+      "new_boot_id": "e41505250e0d826ad1f3a8059ad70dea",
+      "old_boot_id": "f3f8d297f4e4f676895c2df690277c9b",
+      "same_container_id": true,
+      "started_at_changed": true
+    },
+    {
+      "boot_id_changed": true,
+      "container": "hc01-v10-5360f2-c-service",
+      "new_boot_id": "71eb4ed31195d6af92a84967b319d3c0",
+      "old_boot_id": "069164175653c84a44d654210957652b",
+      "same_container_id": true,
+      "started_at_changed": true
+    },
+    {
+      "boot_id_changed": true,
+      "container": "hc01-v10-5360f2-c-service",
+      "new_boot_id": "b488e795cc104476a2ca31432634f9fc",
+      "old_boot_id": "71eb4ed31195d6af92a84967b319d3c0",
+      "same_container_id": true,
+      "started_at_changed": true
+    }
+  ],
+  "evidence_class": "SYNTHETIC_DOCKER_NAMED_VOLUME_RESTART_CONTINUITY",
+  "external_exactly_once_execution_established": false,
+  "failure": null,
+  "host_operator_can_import_legacy_execution": true,
+  "independent_host_admin_isolation_established": false,
+  "original_evidence_rewritten": false,
+  "original_probe_sources_unchanged": true,
+  "prior_reports": {
+    "v07": {
+      "path": "C:\\Users\\garys\\Documents\\elias-healthcare-governance\\02_TEST_RUNS\\HC01_CLIENTAUTH_RESTART_20261012T103447377056Z\\RESULTS.json",
+      "sha256_after": "9568FD2977630CF71A17E6DC18200CA936EDB0005133E3D80F2906709A2572E1",
+      "sha256_before": "9568FD2977630CF71A17E6DC18200CA936EDB0005133E3D80F2906709A2572E1"
+    },
+    "v09": {
+      "path": "C:\\Users\\garys\\Documents\\elias-healthcare-governance\\02_TEST_RUNS\\HC01_PROTECTED_SERVICE_20261012T115727622049Z\\RESULTS.json",
+      "sha256_after": "88C7D5C82478B92AC9C2FD8F0F3D6EBCA9A8D1BFD736DBAEF938F4AA5D98745B",
+      "sha256_before": "88C7D5C82478B92AC9C2FD8F0F3D6EBCA9A8D1BFD736DBAEF938F4AA5D98745B"
+    }
+  },
+  "probe_script_sha256": "0B3AEABB83C1CC0ECD8954DDD10B09E879D3D4AE4FB50E9C97595FB568BB3F80",
+  "production_non_bypassability_established": false,
+  "published_host_ports": [],
+  "real_healthcare_authority_connected": false,
+  "real_patient_records_used": false,
+  "reference_sources_unchanged": true,
+  "revocation_persistent_across_docker_restart_established_within_scope": true,
+  "runtime_security_flags": [
+    "--read-only",
+    "--cap-drop",
+    "ALL",
+    "--security-opt",
+    "no-new-privileges:true",
+    "--pids-limit",
+    "32",
+    "--memory",
+    "128m",
+    "--user",
+    "10001:10001"
+  ],
+  "service_dockerfile_sha256": "490425479D50041A500E1624EB267E57E349F7B6168BC5027F21C0377CDF17F0",
+  "service_image_id": "sha256:fed81438cfcfe885cbf6a084aab58a25679de1cbd607bc2e5da6dc46b77478d3",
+  "service_script_sha256": "193DD403CAF86E4F6292D54B1A16238A1CA25FB72577D0FA7DA02D2B8DD6C84B",
+  "snapshot_matches_original": true,
+  "source_hashes_after": {
+    "SRC/evidence/schema_contract.py": "FBB63926009EF82BDFE7E4BA8E9B8AE05A84F89AFCF50EA0FB8747ED9ED54D2A",
+    "SRC/execution_stub/__init__.py": "12E6E779C091BDE54D921C67450260213BDC16B62C3993B67B093B0B1A4D38E4",
+    "SRC/execution_stub/execution_boundary.py": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5",
+    "SRC/governance/__init__.py": "25205D7EFEFA4F693F894F8239376FA0EC9305216278889ACF3AAEEA2F1D40D4",
+    "SRC/governance/governance_engine.py": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "SRC/latency/__init__.py": "3AC028F3038B8063CBDA354329BCB6DD9A4EED940D935014BE7F6F9114F62ADB",
+    "SRC/latency/latency_measurement.py": "671398811E31BDAE08DACF8227DB4E9ADEF993DD3FECF9CAD071FFC7B453DA89",
+    "SRC/latency/latency_measurement_v0_2.py": "A69C72EB1F4C1C38913F23E34E188F19F076847BFEDD713213ED4FDA1CB8D13A",
+    "SRC/release/__init__.py": "B5B09A6CAC378C7FAE42FDD463E9F1569BFF0A361693E0DA99431CCED3CF4E11",
+    "SRC/release/release_binding.py": "9D38294EE63352712FFD0D361447DB6F3DC3F276C844CAC180016CC41545987E",
+    "SRC/release/release_binding_v0_2.py": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "SRC/witness/__init__.py": "BA52444B0509A0D93A1EC315AE664DC75CAA8FF941D80F6DF9137DD36DF2BAF1",
+    "SRC/witness/witness_chain.py": "9002D46D71ED4CBC123605F542FADFBDF28910F1B3FE87A71515E5E4AF02CB90",
+    "SRC/witness/witness_chain_v0_2.py": "7FA3BF233F18AC7E3820AC2D1FEE43F88D5CCB421C7F55CD4E79BD41824A15AD",
+    "TOOLS/run_governance_selftest.py": "A7B32CAA78F82011348480867243BE28EB09FEFEA15CF65C03BE5DEC53542325"
+  },
+  "source_hashes_before": {
+    "SRC/evidence/schema_contract.py": "FBB63926009EF82BDFE7E4BA8E9B8AE05A84F89AFCF50EA0FB8747ED9ED54D2A",
+    "SRC/execution_stub/__init__.py": "12E6E779C091BDE54D921C67450260213BDC16B62C3993B67B093B0B1A4D38E4",
+    "SRC/execution_stub/execution_boundary.py": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5",
+    "SRC/governance/__init__.py": "25205D7EFEFA4F693F894F8239376FA0EC9305216278889ACF3AAEEA2F1D40D4",
+    "SRC/governance/governance_engine.py": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "SRC/latency/__init__.py": "3AC028F3038B8063CBDA354329BCB6DD9A4EED940D935014BE7F6F9114F62ADB",
+    "SRC/latency/latency_measurement.py": "671398811E31BDAE08DACF8227DB4E9ADEF993DD3FECF9CAD071FFC7B453DA89",
+    "SRC/latency/latency_measurement_v0_2.py": "A69C72EB1F4C1C38913F23E34E188F19F076847BFEDD713213ED4FDA1CB8D13A",
+    "SRC/release/__init__.py": "B5B09A6CAC378C7FAE42FDD463E9F1569BFF0A361693E0DA99431CCED3CF4E11",
+    "SRC/release/release_binding.py": "9D38294EE63352712FFD0D361447DB6F3DC3F276C844CAC180016CC41545987E",
+    "SRC/release/release_binding_v0_2.py": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "SRC/witness/__init__.py": "BA52444B0509A0D93A1EC315AE664DC75CAA8FF941D80F6DF9137DD36DF2BAF1",
+    "SRC/witness/witness_chain.py": "9002D46D71ED4CBC123605F542FADFBDF28910F1B3FE87A71515E5E4AF02CB90",
+    "SRC/witness/witness_chain_v0_2.py": "7FA3BF233F18AC7E3820AC2D1FEE43F88D5CCB421C7F55CD4E79BD41824A15AD",
+    "TOOLS/run_governance_selftest.py": "A7B32CAA78F82011348480867243BE28EB09FEFEA15CF65C03BE5DEC53542325"
+  },
+  "source_v07_sha256": "3DE79FD9417A0EB662F066C25B59034FF6C8AB6EDB35150F6888C4F9E5B6E3C6",
+  "source_v09_sha256": "490517882594E045C1B7006D64C1BD3DA46DD345194A55FC23285075CA0ECF1F",
+  "tamper_resistant_storage_established": false,
+  "test_id": "HC01_DOCKER_RESTART_CONTINUITY_v0.10",
+  "test_network": "hc01-v10-5360f2-internal",
+  "tls_network_transport_established": false
+}

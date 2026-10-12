@@ -1,0 +1,97 @@
+{
+  "test_id": "HC01_EXECUTION_REFERENCE_v0.2",
+  "evidence_class": "AUTOMOTIVE_DERIVED_REFERENCE_PROBE",
+  "healthcare_enforcement_established": false,
+  "real_patient_data": false,
+  "real_vehicle_actuation": false,
+  "simulation_only": true,
+  "external_authority_source_connected": false,
+  "revocation_simulated_at": "2026-09-24T12:00:02Z",
+  "freshness_replay_case": "HC-01C supplies the historical authority object despite a simulated later revocation.",
+  "original_source_sha256_before": {
+    "governance": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "release": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "execution": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5"
+  },
+  "original_source_sha256_after": {
+    "governance": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "release": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "execution": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5"
+  },
+  "original_source_unchanged": true,
+  "setup_error": null,
+  "results": {
+    "HC-01A_VALID_CONTROL": {
+      "execution_attempted": true,
+      "execution_result": "COMPLETED",
+      "reason_code": "SIMULATED_EXECUTION_COMPLETED",
+      "release_id": "REL-95D9A8B9AC8E8323F0C9EAE673093F491004BFD96C48B44E404F144E377E0F3B",
+      "determination_id": "DET-9EDF5C1C58322928963AD376EC28FD0E1E929A5D2479F494031A4E0CA76D2351",
+      "state_id": "STATE-001",
+      "executed_at": "2026-09-24T12:00:03Z",
+      "observed_state": {
+        "action_type": "AUTONOMOUS_MANOEUVRE",
+        "action_target": "SIMULATED_EXECUTION_STUB",
+        "parameters": {
+          "action": "SIMULATED_ONLY"
+        },
+        "vehicle_id": "VEHICLE-001",
+        "state_id": "STATE-001",
+        "simulation_only": true,
+        "physical_actuation": false
+      },
+      "result_hash": "32B3A1C9EC592D01A616D85C91ECF1341677CFB40BAFBB4C507E3AC752E25B9C",
+      "execution_policy_version": "EAG-EXECUTION-0.1"
+    },
+    "HC-01B_REVOKED": {
+      "execution_attempted": false,
+      "execution_result": "REFUSED",
+      "reason_code": "EXECUTION_REFUSED_RELEASE_INVALID_DETERMINATION_RECONCILIATION_FAILED",
+      "release_id": "REL-95D9A8B9AC8E8323F0C9EAE673093F491004BFD96C48B44E404F144E377E0F3B",
+      "determination_id": "DET-9EDF5C1C58322928963AD376EC28FD0E1E929A5D2479F494031A4E0CA76D2351",
+      "state_id": "STATE-001",
+      "executed_at": "2026-09-24T12:00:03Z",
+      "observed_state": {
+        "simulation_only": true,
+        "real_vehicle_actuation": false
+      },
+      "execution_policy_version": "EAG-EXECUTION-0.1"
+    },
+    "HC-01C_HISTORICAL_SNAPSHOT_REPLAY": {
+      "execution_attempted": true,
+      "execution_result": "COMPLETED",
+      "reason_code": "SIMULATED_EXECUTION_COMPLETED",
+      "release_id": "REL-95D9A8B9AC8E8323F0C9EAE673093F491004BFD96C48B44E404F144E377E0F3B",
+      "determination_id": "DET-9EDF5C1C58322928963AD376EC28FD0E1E929A5D2479F494031A4E0CA76D2351",
+      "state_id": "STATE-001",
+      "executed_at": "2026-09-24T12:00:03Z",
+      "observed_state": {
+        "action_type": "AUTONOMOUS_MANOEUVRE",
+        "action_target": "SIMULATED_EXECUTION_STUB",
+        "parameters": {
+          "action": "SIMULATED_ONLY"
+        },
+        "vehicle_id": "VEHICLE-001",
+        "state_id": "STATE-001",
+        "simulation_only": true,
+        "physical_actuation": false
+      },
+      "result_hash": "32B3A1C9EC592D01A616D85C91ECF1341677CFB40BAFBB4C507E3AC752E25B9C",
+      "execution_policy_version": "EAG-EXECUTION-0.1"
+    },
+    "HC-01D_AUTHORITY_UNKNOWN": {
+      "execution_attempted": false,
+      "execution_result": "REFUSED",
+      "reason_code": "EXECUTION_REFUSED_RELEASE_INVALID_DETERMINATION_RECONCILIATION_FAILED",
+      "release_id": "REL-95D9A8B9AC8E8323F0C9EAE673093F491004BFD96C48B44E404F144E377E0F3B",
+      "determination_id": "DET-9EDF5C1C58322928963AD376EC28FD0E1E929A5D2479F494031A4E0CA76D2351",
+      "state_id": "STATE-001",
+      "executed_at": "2026-09-24T12:00:03Z",
+      "observed_state": {
+        "simulation_only": true,
+        "real_vehicle_actuation": false
+      },
+      "execution_policy_version": "EAG-EXECUTION-0.1"
+    }
+  }
+}

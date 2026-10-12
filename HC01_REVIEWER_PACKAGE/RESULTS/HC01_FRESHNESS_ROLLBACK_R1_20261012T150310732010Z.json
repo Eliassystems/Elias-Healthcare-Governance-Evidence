@@ -1,0 +1,49 @@
+{
+  "all_expected_observations_met": false,
+  "checks": {
+    "CONTROL_PRIOR_REPORTS_AND_ARCHIVE_UNCHANGED": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "v10_v11_v12_hash_pinned_artifacts_unchanged": true
+      }
+    },
+    "CONTROL_SIGNED_FRESHNESS_FIXTURE_STAGED": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "floor_generation": 1,
+        "original_authority": "ACTIVE"
+      }
+    }
+  },
+  "checks_count": 2,
+  "evidence_class": "SYNTHETIC_SAME_HOST_DOCKER_SIGNED_FRESHNESS_NEGATIVE_CONTROL",
+  "failure": "RuntimeError: V13_ORACLE_NOT_READY",
+  "freshness_oracle_running_on_same_docker_host": true,
+  "host_can_rollback_old_signed_authority_and_old_signed_freshness_together": false,
+  "independent_freshness_authority_established": false,
+  "independent_host_admin_isolation_established": false,
+  "no_real_world_execution": true,
+  "operational_service_boot_count": 0,
+  "oracle_script_sha256": "D9CBFE8AC24772536C0ECDF88D0CD5011436D2496229306D5863E6E2580F441F",
+  "original_evidence_rewritten": false,
+  "prior_artifact_sha256": {
+    "C:\\Users\\garys\\Documents\\elias-healthcare-governance\\02_TEST_RUNS\\HC01_DOCKER_RESTART_20261012T130713898846Z\\RESULTS.json": "97D4AD4C112329B6D3D0A7120E8EAF54CF5BB696FD8AB4355DC57DB7ABE618D1",
+    "C:\\Users\\garys\\Documents\\elias-healthcare-governance\\02_TEST_RUNS\\HC01_DOCKER_RESTART_CONTINUITY_PROBE_v0_10.py": "0B3AEABB83C1CC0ECD8954DDD10B09E879D3D4AE4FB50E9C97595FB568BB3F80",
+    "C:\\Users\\garys\\Documents\\elias-healthcare-governance\\02_TEST_RUNS\\HC01_HOST_BOUNDARY_20261012T133650347759Z\\RESULTS.json": "C84B357BA3856EE4B59D1B9AEC5876D9D3C8ED9A5547D935C45E523800D3E694",
+    "C:\\Users\\garys\\Documents\\elias-healthcare-governance\\02_TEST_RUNS\\HC01_SIGNED_AUTHORITY_20261012T141040168566Z\\RESULTS.json": "2244B3900313A2CD00C6933BBD63B67AEDD051D97E09F9B1D14138DA10C8F81B",
+    "C:\\Users\\garys\\Documents\\elias-healthcare-governance\\02_TEST_RUNS\\HC01_SIGNED_AUTHORITY_TAMPER_PROBE_v0_12.py": "BDDD38E26DA604758580D50CCCADCD4B1AF83B695F2673A7FAAC45F15AB39EEA",
+    "C:\\Users\\garys\\Documents\\elias-healthcare-governance\\03_RECEIPTS_AND_MANIFESTS\\HC01_V12_SIGNED_AUTHORITY_EVIDENCE.zip": "5652A1233D8CA6FAD5EE1C0E7D47D733B7E3616D475D55923B5ED018749DB01B"
+  },
+  "prior_evidence_unchanged": true,
+  "probe_script_sha256": "22276E65298363BCDCC2079FEBC233889B8AF69802CBC958877333BC0147BE97",
+  "production_non_bypassability_established": false,
+  "real_healthcare_authority_connected": false,
+  "real_patient_records_used": false,
+  "service_script_sha256": "6059B2A013C4FBEDA6FCBD7CFC1054DF71D6A81BC0421E45A0F213BF704563C8",
+  "stale_signed_authority_rejected_while_freshness_floor_remains_current": false,
+  "test_id": "HC01_FRESHNESS_ROLLBACK_v0.13r1",
+  "tls_network_transport_established": false,
+  "verifier_script_sha256": "D119DD41D87FE95A5B50C0E846C8192BA3CBC20AA8815E4A152CA3798A95FDFC"
+}

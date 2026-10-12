@@ -1,0 +1,232 @@
+﻿[
+    {
+        "run":  "HC01_AUTHENTICITY_20261011T222245827900Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_AUTHENTICITY_20261011T222245827900Z/RESULTS.json",
+        "sha256":  "BBFBAACD8335EE4ED402A650BD6D1415705A3B64D64B59DE575622D0A683456B",
+        "all_expectations_met":  false,
+        "all_expected_observations_met":  null,
+        "checks_count":  null,
+        "failure":  null,
+        "status":  "EXPECTED_OBSERVATIONS_NOT_MET"
+    },
+    {
+        "run":  "HC01_BOUNDARY_20261011T223827444267Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_BOUNDARY_20261011T223827444267Z/RESULTS.json",
+        "sha256":  "A589A5DF26E659FA85F6F27DBAB57ED58E53081FA63BDC32EA3D8F2211A79A3E",
+        "all_expectations_met":  null,
+        "all_expected_observations_met":  null,
+        "checks_count":  null,
+        "failure":  null,
+        "status":  "RECORDED_REQUIRES_REVIEW"
+    },
+    {
+        "run":  "HC01_CLIENTAUTH_RESTART_20261012T103447377056Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_CLIENTAUTH_RESTART_20261012T103447377056Z/RESULTS.json",
+        "sha256":  "9568FD2977630CF71A17E6DC18200CA936EDB0005133E3D80F2906709A2572E1",
+        "all_expectations_met":  true,
+        "all_expected_observations_met":  null,
+        "checks_count":  null,
+        "failure":  null,
+        "status":  "EXPECTED_OBSERVATIONS_MET"
+    },
+    {
+        "run":  "HC01_COMMIT_20261011T222724096990Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_COMMIT_20261011T222724096990Z/RESULTS.json",
+        "sha256":  "46D2AE984BD8248B059B3F275E752DF54981989DD3C2986A7135A2A18D06BF19",
+        "all_expectations_met":  null,
+        "all_expected_observations_met":  null,
+        "checks_count":  null,
+        "failure":  null,
+        "status":  "RECORDED_REQUIRES_REVIEW"
+    },
+    {
+        "run":  "HC01_DOCKER_ISOLATION_20261012T114446420140Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_DOCKER_ISOLATION_20261012T114446420140Z/RESULTS.json",
+        "sha256":  "81A3B467358ECF7B5116B297E72D1BA8B1908C57D89D25135EFAD0F954A13615",
+        "all_expectations_met":  null,
+        "all_expected_observations_met":  null,
+        "checks_count":  null,
+        "failure":  null,
+        "status":  "RECORDED_REQUIRES_REVIEW"
+    },
+    {
+        "run":  "HC01_DOCKER_ISOLATION_20261012T114456782644Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_DOCKER_ISOLATION_20261012T114456782644Z/RESULTS.json",
+        "sha256":  "1E2C6B9E5F8F8E2699EB7E4899D63E9E57AF78A440422A18F5C35441181E627A",
+        "all_expectations_met":  null,
+        "all_expected_observations_met":  null,
+        "checks_count":  null,
+        "failure":  null,
+        "status":  "RECORDED_REQUIRES_REVIEW"
+    },
+    {
+        "run":  "HC01_DOCKER_RESTART_20261012T130713898846Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_DOCKER_RESTART_20261012T130713898846Z/RESULTS.json",
+        "sha256":  "97D4AD4C112329B6D3D0A7120E8EAF54CF5BB696FD8AB4355DC57DB7ABE618D1",
+        "all_expectations_met":  true,
+        "all_expected_observations_met":  null,
+        "checks_count":  12,
+        "failure":  null,
+        "status":  "EXPECTED_OBSERVATIONS_MET"
+    },
+    {
+        "run":  "HC01_EXECUTION_20261011T220641816155Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_EXECUTION_20261011T220641816155Z/RESULTS.json",
+        "sha256":  "3104DABA623953C677F7C4EC73FF89942A626C89C5452CB4BFD98A53EC49869A",
+        "all_expectations_met":  null,
+        "all_expected_observations_met":  null,
+        "checks_count":  null,
+        "failure":  null,
+        "status":  "RECORDED_REQUIRES_REVIEW"
+    },
+    {
+        "run":  "HC01_EXECUTION_20261011T220910435536Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_EXECUTION_20261011T220910435536Z/RESULTS.json",
+        "sha256":  "4CCC04A17282BD79056FD5AF33560EF87E5EA71057A4448B786EB19FBD723C22",
+        "all_expectations_met":  null,
+        "all_expected_observations_met":  null,
+        "checks_count":  null,
+        "failure":  null,
+        "status":  "RECORDED_REQUIRES_REVIEW"
+    },
+    {
+        "run":  "HC01_FORGERY_20261011T221515577660Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_FORGERY_20261011T221515577660Z/RESULTS.json",
+        "sha256":  "15DFC1BEA0815DF7F4F1EBB6377928A0F8FFC63EBB9557E1F25D78A84BDAF298",
+        "all_expectations_met":  false,
+        "all_expected_observations_met":  null,
+        "checks_count":  null,
+        "failure":  null,
+        "status":  "EXPECTED_OBSERVATIONS_NOT_MET"
+    },
+    {
+        "run":  "HC01_FRESHNESS_20261011T221245838592Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_FRESHNESS_20261011T221245838592Z/RESULTS.json",
+        "sha256":  "20B824EDCAC25F173D01AAB5326A10612318E0BCB993C89B56589E0AE2A79D7B",
+        "all_expectations_met":  true,
+        "all_expected_observations_met":  null,
+        "checks_count":  null,
+        "failure":  null,
+        "status":  "EXPECTED_OBSERVATIONS_MET"
+    },
+    {
+        "run":  "HC01_FRESHNESS_ROLLBACK_20261012T143129419425Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_FRESHNESS_ROLLBACK_20261012T143129419425Z/RESULTS.json",
+        "sha256":  "2B4369726A24E91725B8CEFBE9E02C582DEAE662E9E5D3788B11554D393AAE58",
+        "all_expectations_met":  null,
+        "all_expected_observations_met":  false,
+        "checks_count":  2,
+        "failure":  "RuntimeError: V13_ORACLE_NOT_READY",
+        "status":  "EXPECTED_OBSERVATIONS_NOT_MET"
+    },
+    {
+        "run":  "HC01_FRESHNESS_ROLLBACK_R1_20261012T150020745903Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_FRESHNESS_ROLLBACK_R1_20261012T150020745903Z/RESULTS.json",
+        "sha256":  "EA33B005DA0BD47F845A7FC4A68261D7A23034BAE1E2F3D71F57842336662C9A",
+        "all_expectations_met":  null,
+        "all_expected_observations_met":  false,
+        "checks_count":  2,
+        "failure":  "RuntimeError: V13_ORACLE_NOT_READY",
+        "status":  "EXPECTED_OBSERVATIONS_NOT_MET"
+    },
+    {
+        "run":  "HC01_FRESHNESS_ROLLBACK_R1_20261012T150253616700Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_FRESHNESS_ROLLBACK_R1_20261012T150253616700Z/RESULTS.json",
+        "sha256":  "A29F50092B5087680470FC4B241316024E1DB0920A1730B17322E91F7AF2BE8A",
+        "all_expectations_met":  null,
+        "all_expected_observations_met":  false,
+        "checks_count":  2,
+        "failure":  "RuntimeError: V13_ORACLE_NOT_READY",
+        "status":  "EXPECTED_OBSERVATIONS_NOT_MET"
+    },
+    {
+        "run":  "HC01_FRESHNESS_ROLLBACK_R1_20261012T150310732010Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_FRESHNESS_ROLLBACK_R1_20261012T150310732010Z/RESULTS.json",
+        "sha256":  "4A38BA2BC55F433F811C42C797AF1A59B9B931AFF82ED6215CCBB56DFB2291B3",
+        "all_expectations_met":  null,
+        "all_expected_observations_met":  false,
+        "checks_count":  2,
+        "failure":  "RuntimeError: V13_ORACLE_NOT_READY",
+        "status":  "EXPECTED_OBSERVATIONS_NOT_MET"
+    },
+    {
+        "run":  "HC01_FRESHNESS_ROLLBACK_R2_20261012T150951511086Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_FRESHNESS_ROLLBACK_R2_20261012T150951511086Z/RESULTS.json",
+        "sha256":  "83C79A86A44BAD859EBF301F02628AEFAA83838D24CE109799062972D7C403E5",
+        "all_expectations_met":  null,
+        "all_expected_observations_met":  true,
+        "checks_count":  16,
+        "failure":  null,
+        "status":  "EXPECTED_OBSERVATIONS_MET"
+    },
+    {
+        "run":  "HC01_HOST_BOUNDARY_20261012T133650347759Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_HOST_BOUNDARY_20261012T133650347759Z/RESULTS.json",
+        "sha256":  "C84B357BA3856EE4B59D1B9AEC5876D9D3C8ED9A5547D935C45E523800D3E694",
+        "all_expectations_met":  null,
+        "all_expected_observations_met":  true,
+        "checks_count":  12,
+        "failure":  null,
+        "status":  "EXPECTED_OBSERVATIONS_MET"
+    },
+    {
+        "run":  "HC01_INTEGRATED_20261012T095339414757Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_INTEGRATED_20261012T095339414757Z/RESULTS.json",
+        "sha256":  "193EC3AEE99131F3ACE4F41A0F2CE55D5978110A312926892D9FE9797582788B",
+        "all_expectations_met":  true,
+        "all_expected_observations_met":  null,
+        "checks_count":  null,
+        "failure":  null,
+        "status":  "EXPECTED_OBSERVATIONS_MET"
+    },
+    {
+        "run":  "HC01_OFFHOST_ENFORCEMENT_20261012T162634164592Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_OFFHOST_ENFORCEMENT_20261012T162634164592Z/RESULTS.json",
+        "sha256":  "45AD286E573902CB2CE523FFA89A218124B250243AB292AA147AB94BB57517C0",
+        "all_expectations_met":  true,
+        "all_expected_observations_met":  null,
+        "checks_count":  6,
+        "failure":  null,
+        "status":  "EXPECTED_OBSERVATIONS_MET"
+    },
+    {
+        "run":  "HC01_OFFHOST_SIGNATURE_20261012T161421Z_007b88",
+        "result_relative_path":  "02_TEST_RUNS/HC01_OFFHOST_SIGNATURE_20261012T161421Z_007b88/RESULTS.json",
+        "sha256":  "57EA3E254F7A4BA13DE7495D43E4DFFADF8A5CCDE634F8961AF41B1B9F8D2B00",
+        "all_expectations_met":  true,
+        "all_expected_observations_met":  null,
+        "checks_count":  8,
+        "failure":  null,
+        "status":  "EXPECTED_OBSERVATIONS_MET"
+    },
+    {
+        "run":  "HC01_OFFHOST_SIGNATURE_20261012T161632Z_138374",
+        "result_relative_path":  "02_TEST_RUNS/HC01_OFFHOST_SIGNATURE_20261012T161632Z_138374/RESULTS.json",
+        "sha256":  "E10FCD8B33949238F95B62E107C558051311C7EDDF55FD34C5DDC19BFD917E3F",
+        "all_expectations_met":  true,
+        "all_expected_observations_met":  null,
+        "checks_count":  8,
+        "failure":  null,
+        "status":  "EXPECTED_OBSERVATIONS_MET"
+    },
+    {
+        "run":  "HC01_PROTECTED_SERVICE_20261012T115727622049Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_PROTECTED_SERVICE_20261012T115727622049Z/RESULTS.json",
+        "sha256":  "88C7D5C82478B92AC9C2FD8F0F3D6EBCA9A8D1BFD736DBAEF938F4AA5D98745B",
+        "all_expectations_met":  true,
+        "all_expected_observations_met":  null,
+        "checks_count":  22,
+        "failure":  null,
+        "status":  "EXPECTED_OBSERVATIONS_MET"
+    },
+    {
+        "run":  "HC01_SIGNED_AUTHORITY_20261012T141040168566Z",
+        "result_relative_path":  "02_TEST_RUNS/HC01_SIGNED_AUTHORITY_20261012T141040168566Z/RESULTS.json",
+        "sha256":  "2244B3900313A2CD00C6933BBD63B67AEDD051D97E09F9B1D14138DA10C8F81B",
+        "all_expectations_met":  null,
+        "all_expected_observations_met":  true,
+        "checks_count":  13,
+        "failure":  null,
+        "status":  "EXPECTED_OBSERVATIONS_MET"
+    }
+]

@@ -1,0 +1,37 @@
+{
+  "all_expectations_met": true,
+  "authority_endpoint": "https://hc01-v014-synthetic-authority.onrender.com",
+  "captured_signed_response": {
+    "payload": {
+      "authority": "REVOKED",
+      "expires_at": 1791821691,
+      "generation": 2,
+      "issued_at": 1791821661,
+      "nonce": "f1a39f8bd34991380c4cf5613df0c148",
+      "release_id": "HC01-SYNTHETIC-ONLY",
+      "schema": "HC01-OFFHOST-AUTHORITY-0.14",
+      "scope": "SYNTHETIC_TEST_NO_PATIENT_DATA"
+    },
+    "public_key_sha256": "4E9587F1F81E1505F51D4DBB4CF23F6EAC5A31A13CA46D1EE0AC760D95BAD837",
+    "signature_ed25519_b64": "hZUA+//+ObPGS3OoWLPCBIkp8wut/DkLwDxMNJVDBHO5nPK6FADjC9x/B6f46nT1BKV5wsOKB1D6ufB4eyu3Cw=="
+  },
+  "checks": {
+    "altered_signature_rejected": true,
+    "nonce_replay_rejected": true,
+    "pinned_public_key_matches": true,
+    "response_nonce_matches": true,
+    "signature_ed25519_verified": true,
+    "synthetic_revoked_contract_matches": true,
+    "tampered_active_claim_rejected": true,
+    "tls_certificate_validated": true
+  },
+  "checks_count": 8,
+  "evidence_scope": "SYNTHETIC_REMOTE_RESPONSE_CLIENT_VERIFIER",
+  "execution_service_external_authority_enforced": false,
+  "pinned_public_key_sha256": "4E9587F1F81E1505F51D4DBB4CF23F6EAC5A31A13CA46D1EE0AC760D95BAD837",
+  "production_non_bypassability_established": false,
+  "real_healthcare_authority_connected": false,
+  "separate_administrative_control_established": false,
+  "test_id": "HC01_V014_OFFHOST_SIGNATURE_READONLY",
+  "verifier_source_sha256": "6CAA24EBAA0A4BF85DF373399FE21ACA665F40D0C646AE7732D150CC56F9ADE5"
+}

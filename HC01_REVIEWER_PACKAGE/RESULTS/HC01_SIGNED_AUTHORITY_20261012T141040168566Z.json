@@ -1,0 +1,137 @@
+{
+  "all_expected_observations_met": true,
+  "booted_service_count": 5,
+  "checks": {
+    "CONTROL_FORGED_SIGNATURE_REJECTED": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "forged_signature_startup_refused": true
+      }
+    },
+    "CONTROL_LIVE_AUTHORITY_TAMPER_REFUSED": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "reason_code": "GATE_SIGNED_AUTHORITY_INVALID"
+      }
+    },
+    "CONTROL_LOCAL_ADMIN_CANNOT_REACTIVATE": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "reason_code": "GATE_EXTERNAL_AUTHORITY_REQUIRED"
+      }
+    },
+    "CONTROL_NO_PRIVATE_SIGNER_IN_CONTAINER": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "private_signer_env_present": false
+      }
+    },
+    "CONTROL_PRIOR_EVIDENCE_UNCHANGED": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "v10_v11_source_reports_archives_unchanged": true
+      }
+    },
+    "CONTROL_SIGNED_ACTIVE_PREFLIGHT": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "authority": "ACTIVE",
+        "generation": 1,
+        "token_issued": true
+      }
+    },
+    "CONTROL_SIGNED_INITIAL_AUTHORITY_STAGED": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "initial": "ACTIVE",
+        "signed_generation": 1
+      }
+    },
+    "CONTROL_SIGNED_REVOKE_AFTER_RESTART": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "authority": "REVOKED",
+        "execute_refusal": "GATE_AUTHORITY_REVOKED",
+        "generation": 2,
+        "preflight_refusal": "GATE_AUTHORITY_REVOKED"
+      }
+    },
+    "CONTROL_SIGNED_REVOKE_RECOVERY": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "restored_revocation_enforced": true
+      }
+    },
+    "CONTROL_UNSIGNED_STATE_OVERRIDE_REJECTED": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "startup_refused": true,
+        "tampered_state": "ACTIVE"
+      }
+    },
+    "CONTROL_VALID_SIGNED_REACTIVATION": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "generation": 3,
+        "simulated_result": "COMPLETED"
+      }
+    },
+    "LIMIT_HOST_LEGACY_IMPORT_STILL_POSSIBLE": {
+      "kind": "EXPECTED_HOST_LIMITATION",
+      "met": true,
+      "observed": {
+        "legacy_importable": true
+      }
+    },
+    "LIMIT_SIGNED_ACTIVE_ROLLBACK_ADMITTED": {
+      "kind": "EXPECTED_HOST_LIMITATION",
+      "met": true,
+      "observed": {
+        "old_signed_generation": 1,
+        "preflight_issued": true
+      }
+    }
+  },
+  "checks_count": 13,
+  "dockerfile_sha256": "7ABD9B9FB3D91CC3FEEB727E93D4BD4D26ED8F02C32C9A9A6295A26C589AF514",
+  "evidence_class": "SYNTHETIC_DOCKER_SIGNED_AUTHORITY_NEGATIVE_CONTROL",
+  "failure": null,
+  "host_operator_can_replace_verifier_or_replay_signed_state": true,
+  "independent_anti_rollback_established": false,
+  "independent_host_admin_isolation_established": false,
+  "legitimate_external_authority_not_connected": true,
+  "no_real_world_execution": true,
+  "original_evidence_rewritten": false,
+  "prior_artifact_sha256": {
+    "C:\\Users\\garys\\Documents\\elias-healthcare-governance\\02_TEST_RUNS\\HC01_DOCKER_RESTART_20261012T130713898846Z\\RESULTS.json": "97D4AD4C112329B6D3D0A7120E8EAF54CF5BB696FD8AB4355DC57DB7ABE618D1",
+    "C:\\Users\\garys\\Documents\\elias-healthcare-governance\\02_TEST_RUNS\\HC01_DOCKER_RESTART_CONTINUITY_PROBE_v0_10.py": "0B3AEABB83C1CC0ECD8954DDD10B09E879D3D4AE4FB50E9C97595FB568BB3F80",
+    "C:\\Users\\garys\\Documents\\elias-healthcare-governance\\02_TEST_RUNS\\HC01_HOST_AUTHORITY_BOUNDARY_PROBE_v0_11.py": "EA2851B1F0F2F0FC115520C201DA3015DD80E6D33F11484E5B1BED1BB8149D32",
+    "C:\\Users\\garys\\Documents\\elias-healthcare-governance\\02_TEST_RUNS\\HC01_HOST_BOUNDARY_20261012T133650347759Z\\RESULTS.json": "C84B357BA3856EE4B59D1B9AEC5876D9D3C8ED9A5547D935C45E523800D3E694",
+    "C:\\Users\\garys\\Documents\\elias-healthcare-governance\\03_RECEIPTS_AND_MANIFESTS\\HC01_V11_HOST_AUTHORITY_EVIDENCE.zip": "DB26F7A8B71E0F8569EE8ECEBA9EB23B74D3E36EB46A610E271B916BB174F6C5"
+  },
+  "prior_evidence_unchanged": true,
+  "probe_script_sha256": "BDDD38E26DA604758580D50CCCADCD4B1AF83B695F2673A7FAAC45F15AB39EEA",
+  "production_non_bypassability_established": false,
+  "real_healthcare_authority_connected": false,
+  "real_patient_records_used": false,
+  "same_host_operator_controls_probe_and_docker": true,
+  "service_script_sha256": "3F3F3D715104F72F4608A18ADB0F97218736238749DD01D1E26709DC5BAF1552",
+  "signature_mechanism": "SYNTHETIC_RSA_PKCS1_V1_5_SHA256_TEST_FIXTURE_ONLY",
+  "signer_private_exponent_written_to_disk": false,
+  "stale_signed_record_rollback_admitted": true,
+  "test_id": "HC01_SIGNED_AUTHORITY_TAMPER_v0.12",
+  "tls_network_transport_established": false,
+  "unsigned_state_tamper_rejected_in_test_scope": true,
+  "verifier_script_sha256": "1806B96489ABFF1D269B5FFF1FCE341C472761F833FDAE9F5778CF6CB19B4DE2"
+}

@@ -1,0 +1,65 @@
+{
+  "test_id": "HC01_FRESHNESS_GATE_v0.1",
+  "evidence_class": "SYNTHETIC_REFERENCE_ADAPTER_TEST",
+  "external_authority_trust_established": false,
+  "production_non_bypassability_established": false,
+  "healthcare_deployment_validated": false,
+  "real_patient_data": false,
+  "simulation_only": true,
+  "original_source_unchanged": true,
+  "source_hashes_before": {
+    "governance": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "release": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "execution": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5"
+  },
+  "source_hashes_after": {
+    "governance": "CE1AEDECCC38368840F8CB4D54EABA48F80F96A41FA3639D805CB8A56F9DC3B8",
+    "release": "D49784C7E6C89EB342E3CEA16D5B1ECF2246ECC150CE19328D5CD419ACFF54B0",
+    "execution": "8D2334845DA922006ACAE1186DEB6601DA73C79F6CD3D285AE0EF745C7D7DFB5"
+  },
+  "all_expectations_met": true,
+  "results": {
+    "HC-01A_VALID": {
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "reason_code": "SIMULATED_EXECUTION_COMPLETED",
+      "execution_marker_files": 2,
+      "expectation_met": true
+    },
+    "HC-01B_REVOKED": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "FRESHNESS_AUTHORITY_NOT_CURRENT",
+      "execution_marker_files": 0,
+      "expectation_met": true
+    },
+    "HC-01C_HISTORICAL_REPLAY": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "FRESHNESS_AUTHORITY_NOT_CURRENT",
+      "execution_marker_files": 0,
+      "expectation_met": true
+    },
+    "HC-01D_SOURCE_UNAVAILABLE": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "FRESHNESS_AUTHORITY_UNAVAILABLE",
+      "execution_marker_files": 0,
+      "expectation_met": true
+    },
+    "HC-01E_STALE_REGISTRY_RECORD": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "FRESHNESS_RECORD_TOO_OLD",
+      "execution_marker_files": 0,
+      "expectation_met": true
+    },
+    "HC-01F_SUPERSEDED": {
+      "expected": "REFUSED",
+      "actual": "REFUSED",
+      "reason_code": "FRESHNESS_AUTHORITY_NOT_CURRENT",
+      "execution_marker_files": 0,
+      "expectation_met": true
+    }
+  }
+}

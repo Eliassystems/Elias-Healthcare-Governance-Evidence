@@ -1,0 +1,162 @@
+{
+  "all_expected_observations_met": true,
+  "archived_v10_report_entry": "HC01_DOCKER_RESTART_20261012T130713898846Z/RESULTS.json",
+  "checks_count": 12,
+  "docker_restart_records": [
+    {
+      "mode": "restart",
+      "new_boot_id": true,
+      "same_container": true,
+      "started_at_changed": true
+    },
+    {
+      "mode": "start",
+      "new_boot_id": true,
+      "same_container": true,
+      "started_at_changed": true
+    }
+  ],
+  "evidence_class": "SYNTHETIC_DOCKER_HOST_OPERATOR_NEGATIVE_CONTROL",
+  "failure": null,
+  "findings": {
+    "CONTROL_CLIENT_ADMIN_REQUEST_REFUSED": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "reason_code": "GATE_ADMIN_AUTH_INVALID"
+      }
+    },
+    "CONTROL_CLIENT_NO_HOST_PRIVILEGES": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "client_uid": 10001,
+        "legacy_importable": false,
+        "socket_visible": false
+      }
+    },
+    "CONTROL_CONTAINER_RUNTIME_BOUNDARY": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "configured_user": "10001:10001",
+        "named_state_volume_mounted": true,
+        "published_port_bindings": false
+      }
+    },
+    "CONTROL_PRIOR_EVIDENCE_AND_REFERENCE_UNCHANGED": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "previous_evidence_files_unchanged": true
+      }
+    },
+    "CONTROL_REVOKED_CLIENT_REFUSED": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "execute_refusal": "GATE_AUTHORITY_REVOKED",
+        "generation": 2,
+        "markers": 0,
+        "preflight_refusal": "GATE_AUTHORITY_REVOKED"
+      }
+    },
+    "CONTROL_REVOKED_SURVIVES_UNTOUCHED_RESTART": {
+      "kind": "CONTROL",
+      "met": true,
+      "observed": {
+        "authority": "REVOKED",
+        "generation": 2,
+        "preflight_refusal": "GATE_AUTHORITY_REVOKED"
+      }
+    },
+    "LIMIT_EXECUTION_AFTER_HOST_STORAGE_OVERRIDE": {
+      "kind": "EXPECTED_HOST_LIMITATION",
+      "met": true,
+      "observed": {
+        "executions": 1,
+        "markers": 2,
+        "simulated_result": "COMPLETED"
+      }
+    },
+    "LIMIT_HOST_CAN_INSPECT_FIXTURE_SECRETS": {
+      "kind": "EXPECTED_HOST_LIMITATION",
+      "met": true,
+      "observed": {
+        "fixture_environment_credentials_visible_to_docker_operator": true
+      }
+    },
+    "LIMIT_HOST_CAN_OVERRIDE_EXEC_UID": {
+      "kind": "EXPECTED_HOST_LIMITATION",
+      "met": true,
+      "observed": {
+        "host_exec_effective_uid": "0"
+      }
+    },
+    "LIMIT_HOST_IMPORT_LEGACY_AVAILABLE": {
+      "kind": "EXPECTED_HOST_LIMITATION",
+      "met": true,
+      "observed": {
+        "legacy_execution_module_importable": true
+      }
+    },
+    "LIMIT_HOST_WRITES_DURABLE_STATE": {
+      "kind": "EXPECTED_HOST_LIMITATION",
+      "met": true,
+      "observed": {
+        "edited_state": "ACTIVE",
+        "generation": 3,
+        "state_sha256_after": "42D865841DB5798C24CA7681F54105D03B35BE5F39485C34825050CDEE4DB2A6",
+        "state_sha256_before": "0B65F599DD6D7D10D654494FE4A26D165037607ABB2807D184CF4A9FC90F7734"
+      }
+    },
+    "LIMIT_TAMPERED_STATE_ACCEPTED_BY_SERVICE": {
+      "kind": "EXPECTED_HOST_LIMITATION",
+      "met": true,
+      "observed": {
+        "authority": "ACTIVE",
+        "generation": 3,
+        "preflight_issued": true
+      }
+    }
+  },
+  "host_controlled_storage_override_observed": true,
+  "host_operator_can_import_legacy_execution": true,
+  "independent_host_admin_isolation_established": false,
+  "no_real_world_execution": true,
+  "normal_client_revocation_enforced": true,
+  "operator_capability": "DOCKER_DAEMON_HOST_OPERATOR",
+  "original_evidence_rewritten": false,
+  "original_reference_unchanged_after_test": true,
+  "prior_v10_archive_sha256": "08D5B4025D823A4F2ED94D78E16D1DA0C477BBCB471B99304989CA3412725FF5",
+  "prior_v10_report_sha256": "97D4AD4C112329B6D3D0A7120E8EAF54CF5BB696FD8AB4355DC57DB7ABE618D1",
+  "privileged_host_control_is_an_explicit_trust_boundary": true,
+  "probe_script_sha256": "EA2851B1F0F2F0FC115520C201DA3015DD80E6D33F11484E5B1BED1BB8149D32",
+  "production_non_bypassability_established": false,
+  "published_host_ports": [],
+  "real_healthcare_authority_connected": false,
+  "real_patient_records_used": false,
+  "reused_exact_v10_images": {
+    "client": "sha256:560d5397b2f8c1cb79454274187857a78ca463a514353f39a025e8afbc4fa1a8",
+    "service": "sha256:fed81438cfcfe885cbf6a084aab58a25679de1cbd607bc2e5da6dc46b77478d3"
+  },
+  "runtime_security_flags": [
+    "--read-only",
+    "--cap-drop",
+    "ALL",
+    "--security-opt",
+    "no-new-privileges:true",
+    "--pids-limit",
+    "32",
+    "--memory",
+    "128m",
+    "--user",
+    "10001:10001"
+  ],
+  "source_v10_script_sha256": "0B3AEABB83C1CC0ECD8954DDD10B09E879D3D4AE4FB50E9C97595FB568BB3F80",
+  "tamper_resistant_state_established": false,
+  "test_id": "HC01_HOST_AUTHORITY_BOUNDARY_v0.11",
+  "test_network": "hc01-v11-2578e004-internal",
+  "test_volume": "hc01-v11-2578e004-state",
+  "tls_network_transport_established": false
+}
